@@ -1,0 +1,40 @@
+Part 1: Theoretical Understanding 
+Q1. Algorithmic Bias
+
+Definition: Algorithmic bias occurs when AI systems produce unfair outcomes that systematically disadvantage certain groups due to flawed data, design, or assumptions.
+
+Examples:
+
+Hiring – An AI trained on historical male-dominated resumes penalizes female applicants.
+
+Facial recognition – Higher error rates for darker-skinned individuals due to underrepresentation in training datasets.
+
+Q2. Transparency vs Explainability
+
+Transparency: The extent to which the design, data, and processes of an AI system are open and accessible. Example: Publishing datasets and model documentation.
+
+Explainability: The ability to understand and communicate how the AI makes individual decisions. Example: Feature importance scores.
+
+Importance: Transparency builds trust at a system level, while explainability ensures accountability at the decision level. Both are vital for ethical AI adoption.
+
+Q3. GDPR & AI in the EU
+
+GDPR enforces data protection, user consent, and the right to explanation.
+
+Impacts on AI development:
+
+Limits on automated decision-making without human oversight.
+
+Mandatory data minimization and anonymization.
+
+Stronger accountability for AI systems that process personal data.
+
+Principles Matching
+
+A) Justice → Fair distribution of AI benefits and risks.
+
+B) Non-maleficence → Ensuring AI does not harm individuals or society.
+
+C) Autonomy → Respecting users’ right to control their data and decisions.
+
+D) Sustainability → Designing AI to be environmentally friendly.
