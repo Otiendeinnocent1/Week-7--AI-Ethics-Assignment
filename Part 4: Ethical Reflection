@@ -1,0 +1,27 @@
+In my heart disease prediction project, I trained and deployed machine learning models (Logistic Regression and Random Forest) 
+to identify patients at risk of cardiovascular disease. While the technical workflow achieved strong accuracy (~88%), 
+ensuring ethical AI principles in such a health-related project is equally critical.
+
+The most challenging aspect was dealing with data bias and missing values. The dataset came from multiple sources (Cleveland, Hungary, 
+Switzerland, VA Long Beach), but it may underrepresent some demographic groups, such as women or younger patients.
+If the model learns from imbalanced data, it could make biased predictions—potentially underdiagnosing women, who often show different
+symptoms of heart disease compared to men. 
+
+This reinforced for me that fairness in data collection is just as important as model accuracy.
+Another ethical consideration is patient privacy and autonomy. Health data is highly sensitive,
+and even though my project used a public dataset, a real-world deployment must comply with regulations like HIPAA/GDPR.
+Patients should give informed consent before their data is used, and they should have the right to understand how AI contributes 
+to their diagnosis. 
+
+This connects to transparency and explainability: a Random Forest might be accurate, but clinicians and patients
+need understandable insights (e.g., “cholesterol and chest pain type were key factors in your risk prediction”).
+
+If given more time and resources, I would improve my approach by:
+
+Running fairness audits (e.g., checking if predictions differ across gender or race).
+
+Using explainability tools such as SHAP or LIME to make predictions interpretable.
+
+Collaborating with healthcare professionals to validate the system clinically before deployment.
+While my project shows the potential of AI in supporting early detection of heart disease, responsible use requires bias mitigation,
+privacy safeguards, and transparency, so that the model benefits all patients fairly and builds trust in AI-driven healthcare.
