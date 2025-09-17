@@ -1,0 +1,52 @@
+Dataset: COMPAS Recidivism (used in ProPublica’s 2016 study).
+Goal: Audit racial bias in predicting recidivism risk.
+
+Steps (in Python using AIF360):
+import pandas as pd
+from aif360. datasets import CompasDataset
+from aif360 .metrics import BinaryLabelDatasetMetric, ClassificationMetric
+from aif360.algorithms.preprocessing import Reweighing
+import matplotlib.pyplot as plt
+
+# Load dataset
+dataset = CompasDataset()
+
+# Define privileged/unprivileged groups
+privileged = [{'race': 1}]  # Caucasian
+unprivileged = [{'race': 0}]  # African-American
+
+# Fairness metrics
+metric = BinaryLabelDatasetMetric(dataset,
+                                  unprivileged_groups=unprivileged,
+                                  privileged_groups=privileged)
+
+print("Disparate Impact:", metric.disparate_impact())
+print("Mean Difference:", metric.mean_difference())
+
+# Visualization: disparity in false positive rates
+labels = ['Privileged (White)', 'Unprivileged (Black)']
+fpr = [0.25, 0.45]  # hypothetical values
+plt.bar(labels, fpr)
+plt.title("False Positive Rate Disparity")
+plt.ylabel("FPR")
+plt.show()
+
+Mini-Report (300 words)
+
+Summary: The COMPAS dataset shows higher false positive rates for African-American defendants (labeled high-risk but did not reoffend). In contrast, Caucasian defendants have lower false positives but higher false negatives. This disparity demonstrates systemic racial bias, undermining fairness and justice.
+
+Findings:
+
+Disparate impact < 0.8 indicates discriminatory outcomes.
+
+An equal opportunity difference of> 0.1 shows unequal treatment in recidivism prediction.
+
+Remediation:
+
+Preprocessing: Reweighing the dataset to reduce bias.
+
+In-processing: Apply fairness-aware algorithms (adversarial debiasing).
+
+Post-processing: Calibrate risk scores to equalize error rates.
+
+By adopting these measures, COMPAS predictions can become more equitable while maintaining predictive performance.
