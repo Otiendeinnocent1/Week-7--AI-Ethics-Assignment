@@ -1,35 +1,35 @@
-Case 1: Biased Hiring Tool
+Case 1: Biased Hiring Tool (Amazon)
 
-Source of Bias: Training data was based on past resumes (mostly male), reinforcing gender bias.
+Source of Bias: Training data based on historical male-dominated resumes reinforced gender bias.
 
 Fixes:
 
-Balance the training dataset with gender-diverse resumes.
+Balance the dataset with gender-diverse resumes.
 
-Remove gender-correlated features (e.g., college women’s clubs).
+Remove gender-correlated features (e.g., women’s clubs).
 
-Apply fairness constraints during model training (e.g., demographic parity).
+Apply fairness constraints (e.g., demographic parity).
 
 Fairness Metrics:
 
-Disparate impact ratio (should be between 0.8–1.25).
+Disparate impact ratio (should be 0.8–1.25).
 
-Equal opportunity difference (true positive rates across groups).
+Equal opportunity difference (compare true positive rates).
 
 Case 2: Facial Recognition in Policing
 
 Ethical Risks:
 
-Wrongful arrests due to misidentification.
+Wrongful arrests from misidentification.
 
-Privacy violations from mass surveillance.
+Privacy violations through surveillance.
 
-Disproportionate targeting of minority communities.
+Disproportionate targeting of minorities.
 
 Policies for Responsible Deployment:
 
-Independent audits for bias before deployment.
+Independent audits for bias before use.
 
 Restrict use to high-stakes scenarios with human oversight.
 
-Transparency: Public disclosure of system use and limitations.
+Transparency: public disclosure of system use and limitations.
